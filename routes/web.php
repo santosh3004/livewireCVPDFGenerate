@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PDFController;
 use App\Http\Livewire\Cv;
 use Illuminate\Support\Facades\Route;
 use Dompdf\Dompdf;
@@ -16,7 +17,7 @@ use Dompdf\Dompdf;
 */
 
 Route::get('/', function () {
-    return view('cv');
+   return view('cvconvert');
 });
 Route::get('/welcome',function(){
     return view('welcome');
@@ -30,3 +31,6 @@ Route::get('/welcome',function(){
 //     $dompdf->stream('cv.pdf',['Attachment'=>true]);
 // });
 Route::get('/cv',[Cv::class,'createPDF']);
+
+Route::get('htmlpdf',[PDFController::class,'htmlPDF']);
+Route::get('generatePDF',[PDFController::class,'generatePDF']);

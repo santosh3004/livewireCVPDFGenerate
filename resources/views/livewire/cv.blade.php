@@ -87,19 +87,19 @@
                         <div class="yui-gc">
                             <div class="yui-u first">
                                 <h1>{{
-                                    $name
+                                    $cvdata[0]
                                     }}</h1>
                                 <h2>{{
                                 // $nameTail
-                                $name
+                                $cvdata[0]
                                  }}</h2>
                             </div>
 
                             <div class="yui-u">
                                 <div class="contact-info">
 
-                                    <h3><span>{{ $email }}</span></h3>
-                                    <h3>{{ $phone }}</h3>
+                                    <h3><span>{{ $cvdata[1] }}</span></h3>
+                                    <h3>{{ $cvdata[2] }}</h3>
                                 </div>
                                 <!--// .contact-info -->
                             </div>
@@ -118,7 +118,7 @@
                                     </div>
                                     <div class="yui-u">
                                         <p class="enlarge">
-                                            {{ $profile }}
+                                            {{ $cvdata[3] }}
                                         </p>
                                     </div>
                                 </div>
@@ -128,7 +128,7 @@
                                     <div class="yui-u first">
                                         <h2>Skills</h2>
                                     </div>
-                                    <div class="yui-u">
+                                    {{-- <div class="yui-u">
                                         @if (count($skillsArray) > 0)
                                             @for ($i = 0; $i < count($skillsArray); $i++)
                                                 <div class="talent">
@@ -136,7 +136,7 @@
                                                     <p>{{ $skillsDescriptionArray[0] }}</p>
                                                 </div>
                                             @endfor
-                                        @endif
+                                        @endif --}}
                                         {{-- <div class="talent">
                                                 <h2>{{ $skillsArray[0] }}</h2>
                                                 <p>{{ $skillsDescription }}</p>
@@ -154,7 +154,7 @@
                                     <div class="yui-u first">
                                         <h2>Technical</h2>
                                     </div>
-                                    <div class="yui-u">
+                                    {{-- <div class="yui-u">
                                         <ul class="talent">
                                             @if (count($technicalSkillsArray) > 0)
                                                 @for ($i = 0; $i < count($technicalSkillsArray); $i++)
@@ -173,7 +173,7 @@
                                             <li>{{ $technicalSkills }}</li>
                                             <li class="last">{{ $technicalSkills }}</li>
                                         </ul>
-                                    </div>
+                                    </div> --}}
                                 </div>
                                 <!--// .yui-gf-->
 
@@ -184,7 +184,7 @@
                                     </div>
                                     <!--// .yui-u -->
 
-                                    <div class="yui-u">
+                                    {{-- <div class="yui-u">
                                         @if (count($experienceArray) > 0)
                                             @for ($i = 0; $i < count($experienceArray); $i++)
                                                 <div class="job">
@@ -195,7 +195,7 @@
                                                 </div>
                                             @endfor
                                         @endif
-                                    </div>
+                                    </div> --}}
                                     <!--// .yui-u -->
                                 </div>
                                 <!--// .yui-gf -->
@@ -206,8 +206,8 @@
                                         <h2>Education</h2>
                                     </div>
                                     <div class="yui-u">
-                                        <h2>{{ $university }}</h2>
-                                        <h3>{{ $certificate }}</h3>
+                                        <h2>{{ $cvdata[4] }}</h2>
+                                        <h3>{{ $cvdata[5] }}</h3>
                                     </div>
                                 </div>
                                 <!--// .yui-gf -->
@@ -221,7 +221,7 @@
                     <!--// bd -->
 
                     <div id="ft">
-                        <p>{{ $name }} &mdash; <span> {{ $email }}</span> &mdash; {{ $phone }}
+                        <p>{{ $cvdata[0] }} &mdash; <span> {{ $cvdata[1] }}</span> &mdash; {{ $cvdata[2] }}
                         </p>
                     </div>
                     <!--// footer -->
